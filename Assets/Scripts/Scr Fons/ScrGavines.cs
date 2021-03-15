@@ -4,6 +4,20 @@ using UnityEngine;
 
 public class ScrGavines : MonoBehaviour
 {
+
+    /// <summary>
+    /// ----------------------------------------------------------------------------------
+    /// DESCRIPCIÓ
+    ///         Script utilitzat per crear un "generador" de gavines. 
+    /// AUTOR:  Lídia García Romero
+    /// DATA:   03/08/21
+    /// VERSIÓ: 1.0
+    /// CONTROL DE VERSIONS
+    ///         1.0: Es generen correctament. Acabat.
+    /// ----------------------------------------------------------------------------------
+    /// </summary>
+
+
     float cadencia;
     [SerializeField] GameObject gavina;
  
@@ -15,7 +29,6 @@ public class ScrGavines : MonoBehaviour
     void Update()
     {
         cadencia -= 1;
-        print(cadencia);
 
         if (cadencia <= 0)
         {
