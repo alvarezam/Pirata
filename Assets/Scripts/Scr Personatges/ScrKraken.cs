@@ -9,6 +9,7 @@ public class ScrKraken : MonoBehaviour
     {
         //prova a veure si funciona el Github.
         //a ver...
+        //en serio no funciona
     }
 
     // Update is called once per frame
