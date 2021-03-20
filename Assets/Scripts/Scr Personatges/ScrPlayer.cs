@@ -26,11 +26,12 @@ public class ScrPlayer : MonoBehaviour
 
     Vector2 movi = new Vector2(); //Calcul moviment
     Rigidbody2D rb;               //Per accedir al riggidbody
-    AudioSource so;
+    [SerializeField] AudioSource so;
 
     //**************Dispar*************
     [SerializeField] GameObject missil;
     [SerializeField] Transform[] canons;
+    [SerializeField] float VDispar = 20f;
 
     //*************Dispars Seguits**************
 
@@ -78,16 +79,17 @@ public class ScrPlayer : MonoBehaviour
             if (cano.gameObject.activeSelf) Instantiate(missil, cano.position, cano.rotation);
         so.Play();
         crono = 0;
+        print("hola");
     }
 
 
     void DisparTriple(bool estat)
     {
-        canons[0].gameObject.SetActive(estat);
+      
       
     }
 
-    void Detruccio()
+    void Detruccio() 
     {
         Destroy(gameObject);
     }
