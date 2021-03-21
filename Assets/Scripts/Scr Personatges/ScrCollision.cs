@@ -10,16 +10,19 @@ public class ScrCollision : MonoBehaviour
     /// DESCRIPCIÓ
     ///         Script utilitzat per detectar colisions. "Mira" el que fan, resten vida,
     ///         els destrueix si aquesta arriba a 0, reprodueixen audio...
-    /// AUTOR:  Lídia Garía Romero
+    /// AUTOR:  Lídia Garía Romero i Elisabet Arnal
     /// DATA:   15/03/2021
     /// VERSIÓ: 1.0
     /// CONTROL DE VERSIONS
     ///         1.0: No es pot comprovar el seu funcionament perquè el Player no està programat.
-    ///         2.0: 
+    ///         2.0: S'ha afegit els audios de tocat i enfonsat del player. El player no es destueix.
+    ///         3.0: S'han corregit els errors de quan els personatges no es destruien.
     /// ----------------------------------------------------------------------------------
     /// </summary>
 
     [SerializeField] float vida = 0f;
+
+    [SerializeField] AudioClip tocat, enfonsat;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -40,6 +43,24 @@ public class ScrCollision : MonoBehaviour
                 vida -= Damage.damageNPC;
                 impacte = true;
             }
+        }
+
+        if (impacte)
+        {
+            if (vida <= 0 && enfonsat)
+                AudioSource.PlayClipAtPoint(enfonsat, Camera.main.transform.position);
+            if (vida <= 0 && tocat)
+                AudioSource.PlayClipAtPoint(tocat, Camera.main.transform.position);
+        }
+
+        if (collision.tag == "shot" && impacte)
+        {
+            collision.SendMessage("Destruccio", SendMessageOptions.DontRequireReceiver);
+        }
+
+        if (vida <= 0)
+        {
+            SendMessage("Destruccio", SendMessageOptions.DontRequireReceiver);
         }
     }
 }

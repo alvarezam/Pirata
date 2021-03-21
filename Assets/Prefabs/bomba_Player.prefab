@@ -15,8 +15,8 @@ GameObject:
   - component: {fileID: 5963767278982215707}
   - component: {fileID: 8083130525709163352}
   m_Layer: 0
-  m_Name: bomba
-  m_TagString: Untagged
+  m_Name: bomba_Player
+  m_TagString: shot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 2441518190771406998}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -7.12, y: 0.31, z: 0}
-  m_LocalScale: {x: 0.6410747, y: 0.6410747, z: 0.6410747}
+  m_LocalScale: {x: 0.19979665, y: 0.19979665, z: 0.19979665}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -74,8 +74,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 33b67ffbee3b8e64baf86a21a43b7550, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 0325c1b519521e34d8aff0d5752fda6c, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -98,9 +98,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.03, y: 0.09}
   serializedVersion: 2
-  m_Radius: 0.44
+  m_Radius: 1.28
 --- !u!114 &7511238375419960696
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -113,8 +113,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ba93bbaf97258448994afb9dd1a5a16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageNPC: 0
-  damagePlayer: 1
+  damageNPC: 1
+  damagePlayer: 0
 --- !u!114 &5963767278982215707
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -128,6 +128,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vida: 1
+  tocat: {fileID: 0}
+  enfonsat: {fileID: 0}
 --- !u!114 &8083130525709163352
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -140,4 +142,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39c5754b8bbb26e4ca1362f2ff035d9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocitat: -10
+  velocitat: 10
