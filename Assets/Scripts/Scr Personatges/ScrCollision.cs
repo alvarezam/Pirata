@@ -15,11 +15,13 @@ public class ScrCollision : MonoBehaviour
     /// VERSIÓ: 1.0
     /// CONTROL DE VERSIONS
     ///         1.0: No es pot comprovar el seu funcionament perquè el Player no està programat.
-    ///         2.0: 
+    ///         2.0: S'ha afegit els audios de tocat i enfonsat del player. El player no es destueix.
     /// ----------------------------------------------------------------------------------
     /// </summary>
 
     [SerializeField] float vida = 0f;
+
+    [SerializeField] AudioClip tocat, enfonsat;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -40,6 +42,14 @@ public class ScrCollision : MonoBehaviour
                 vida -= Damage.damageNPC;
                 impacte = true;
             }
+        }
+
+        if (impacte)
+        {
+            if (vida <= 0 && enfonsat)
+                AudioSource.PlayClipAtPoint(enfonsat, Camera.main.transform.position);
+            if (vida <= 0 && tocat)
+                AudioSource.PlayClipAtPoint(tocat, Camera.main.transform.position);
         }
     }
 }
