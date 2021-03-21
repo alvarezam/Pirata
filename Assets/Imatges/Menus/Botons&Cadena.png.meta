@@ -120,12 +120,12 @@ TextureImporter:
       name: Botons&Cadena_0
       rect:
         serializedVersion: 2
-        x: 52
-        y: 1926
-        width: 3362
-        height: 789
+        x: 56
+        y: 1931
+        width: 3356
+        height: 783
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -141,12 +141,12 @@ TextureImporter:
       name: Botons&Cadena_1
       rect:
         serializedVersion: 2
-        x: 4379
-        y: 746
-        width: 132
-        height: 2566
+        x: 4190
+        y: 891
+        width: 2574
+        height: 2421
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -159,15 +159,36 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
+      name: Botons&Cadena_2
+      rect:
+        serializedVersion: 2
+        x: 3800
+        y: 755
+        width: 132
+        height: 2557
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b90bcdd00d661c540800000000000000
+      internalID: 5026411702893981851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
       name: Botons&Cadena_3
       rect:
         serializedVersion: 2
-        x: 57
-        y: 998
-        width: 3355
+        x: 56
+        y: 999
+        width: 3357
         height: 786
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -185,10 +206,10 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 3468
-        height: 922
+        width: 3470
+        height: 923
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
