@@ -30,9 +30,10 @@ public class ScrKraken : MonoBehaviour
     // ********************** Shooting ************************
     [SerializeField] Transform tentacle1, tentacle2, tentacle3, tentacle4, tentacle5, tentacle6;  
     [SerializeField] GameObject tinta;
-    [SerializeField] float cadenciaMin = 0.5f, cadenciaMax = 1f; // tiempo entre disparos
+    [SerializeField] float cadenciaMin = 2f, cadenciaMax = 20f; // tiempo entre disparos
     float crono;
     bool isDestroyed = false;
+    float nombre_tintes;
     Renderer r;
     Collider2D col;
 
@@ -53,40 +54,55 @@ public class ScrKraken : MonoBehaviour
 
     void Update()
     {
-        // if (r.isVisible)
         if (ScrControlGame.EsVisibleDesde(r, Camera.main))
         {
             col.enabled = true;
             crono -= Time.deltaTime;
-            if ((crono <= 0) && (transform.position.x < 4)) Dispara();
+            if ((crono <= 0) && (transform.position.x < 4))
+            {
+                nombre_tintes = Random.Range(0, 10); //quants trets de tinta dispararà
+                Dispara(); //el boss dispararà quan arribi a x = 4
+            }
         }
     }
 
     void Dispara()
     {
         GameObject p1;
-        p1 = Instantiate(tinta, tentacle1.position, tentacle1.rotation);
-        p1.transform.Rotate(0, 0, Random.Range(-10, 10));
+        p1 = Instantiate(tinta, tentacle1.position, tentacle1.rotation);        //dispara d'1 a 6 trets de tinta alhora
+        p1.transform.Rotate(0, 0, 0);
 
-        GameObject p2;
-        p2 = Instantiate(tinta, tentacle2.position, tentacle2.rotation);
-        p2.transform.Rotate(0, 0, Random.Range(-10, 10));
+        if (nombre_tintes > 5)
+        {
+            GameObject p2;
+            p2 = Instantiate(tinta, tentacle2.position, tentacle2.rotation);        // els canons es diuen tentacles perquè la idea inicial era que disparés desde els tentacles
+            p2.transform.Rotate(0, 0, Random.Range(-30, 30));
+        }
+        else if (nombre_tintes > 4)
+        {
+            GameObject p3;
+            p3 = Instantiate(tinta, tentacle3.position, tentacle3.rotation);
+            p3.transform.Rotate(0, 0, Random.Range(-30, 30));
+        }
+        else if (nombre_tintes > 3)
+        {
+            GameObject p4;
+            p4 = Instantiate(tinta, tentacle4.position, tentacle4.rotation);
+            p4.transform.Rotate(0, 0, Random.Range(-30, 30));
+        }
+        else if (nombre_tintes > 2)
+        {
+            GameObject p5;
+            p5 = Instantiate(tinta, tentacle5.position, tentacle5.rotation);
+            p5.transform.Rotate(0, 0, Random.Range(-30, 30));
+        }
+        else if (nombre_tintes > 1)
+        {
 
-        GameObject p3;
-        p3 = Instantiate(tinta, tentacle3.position, tentacle3.rotation);
-        p3.transform.Rotate(0, 0, Random.Range(-10, 10));
-
-        GameObject p4;
-        p4 = Instantiate(tinta, tentacle4.position, tentacle4.rotation);
-        p4.transform.Rotate(0, 0, Random.Range(-10, 10));
-
-        GameObject p5;
-        p5 = Instantiate(tinta, tentacle5.position, tentacle5.rotation);
-        p5.transform.Rotate(0, 0, Random.Range(-10, 10));
-
-        GameObject p6;
-        p6 = Instantiate(tinta, tentacle6.position, tentacle6.rotation);
-        p6.transform.Rotate(0, 0, Random.Range(-10, 10));
+            GameObject p6;
+            p6 = Instantiate(tinta, tentacle6.position, tentacle6.rotation);
+            p6.transform.Rotate(0, 0, Random.Range(-16, 16));
+        }
 
 
         crono = Random.Range(cadenciaMin, cadenciaMax); // Següent tret
@@ -95,7 +111,7 @@ public class ScrKraken : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (transform.position.x > 2)
+        if (transform.position.x > 3)  //el boss es pararà quan arribi a x = 3
         {
             moviment.x = velX;
         }
@@ -104,7 +120,7 @@ public class ScrKraken : MonoBehaviour
             moviment.x = 0;
         }
 
-        float amplitud = 5, freq = 2;
+        float amplitud = 5, freq = 2;   //Això fa que pugi i baixi
         
         moviment.y = Mathf.Sin(Time.time * freq) * amplitud;
 

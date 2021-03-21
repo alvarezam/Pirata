@@ -252,8 +252,8 @@ MonoBehaviour:
   tentacle5: {fileID: 9163162681363744700}
   tentacle6: {fileID: 9163162682720234317}
   tinta: {fileID: 704762531870020842, guid: ec872972421861a4b9307d0afb9721e8, type: 3}
-  cadenciaMin: 0.5
-  cadenciaMax: 1
+  cadenciaMin: 1
+  cadenciaMax: 5
 --- !u!95 &9163162682642711472
 Animator:
   serializedVersion: 3
