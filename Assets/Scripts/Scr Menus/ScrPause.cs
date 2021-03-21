@@ -3,28 +3,28 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement; //Utilitzo SceneManagement per poder canviar de Escena durant la partida
 
-public class ScrMenu : MonoBehaviour
+public class ScrPause : MonoBehaviour
 {
     /// <summary>
     /// ----------------------------------------------------------------------------------
     /// DESCRIPCIÓ
-    ///         Script utilitzat per controlar les accions dels botons del menu d'inici.
+    ///         Script utilitzat per controlar les accions dels botons de pausa del joc.
     /// AUTOR:  Marc Alvarez Abril
     /// DATA:   21/03/2021
     /// VERSIÓ: 1.0
     /// ----------------------------------------------------------------------------------
     /// </summary>
 
-    public void Link()
+    public void Pause()
     {
-        Application.OpenURL("https://www.emav.com/");
+
     }
-    public void StartGame()
+    public void Resume()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); //Per canviar d'escena (de menu a joc)
+
     }
     public void Exit()
     {
-        Application.Quit(); //Per sortir del joc
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1); //Per canviar d'escena (de joc a menu)
     }
 }
