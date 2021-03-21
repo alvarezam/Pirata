@@ -76,32 +76,32 @@ public class ScrKraken : MonoBehaviour
         {
             GameObject p2;
             p2 = Instantiate(tinta, tentacle2.position, tentacle2.rotation);        // els canons es diuen tentacles perquè la idea inicial era que disparés desde els tentacles
-            p2.transform.Rotate(0, 0, Random.Range(-30, 30));
+            p2.transform.Rotate(0, 0, -10);
         }
         else if (nombre_tintes > 4)
         {
             GameObject p3;
             p3 = Instantiate(tinta, tentacle3.position, tentacle3.rotation);
-            p3.transform.Rotate(0, 0, Random.Range(-30, 30));
+            p3.transform.Rotate(0, 0, 10);
         }
         else if (nombre_tintes > 3)
         {
             GameObject p4;
             p4 = Instantiate(tinta, tentacle4.position, tentacle4.rotation);
-            p4.transform.Rotate(0, 0, Random.Range(-30, 30));
+            p4.transform.Rotate(0, 0, 20);
         }
         else if (nombre_tintes > 2)
         {
             GameObject p5;
             p5 = Instantiate(tinta, tentacle5.position, tentacle5.rotation);
-            p5.transform.Rotate(0, 0, Random.Range(-30, 30));
+            p5.transform.Rotate(0, 0, -20);
         }
         else if (nombre_tintes > 1)
         {
 
             GameObject p6;
             p6 = Instantiate(tinta, tentacle6.position, tentacle6.rotation);
-            p6.transform.Rotate(0, 0, Random.Range(-16, 16));
+            p6.transform.Rotate(0, 0, 30);
         }
 
 
