@@ -9,7 +9,7 @@ using UnityEngine;
 /// ----------------------------------------------------------------------------------
 /// DESCRIPCIÓ
 ///         Script utilitzat per controlar el player 
-/// AUTOR:  Elisabet
+/// AUTOR:  Elisabet 
 /// DATA:   17/03/2021
 /// VERSIÓ: 1.0
 /// CONTROL DE VERSIONS
