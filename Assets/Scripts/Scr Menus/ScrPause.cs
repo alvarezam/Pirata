@@ -17,6 +17,16 @@ public class ScrPause : MonoBehaviour
 
     public bool PausedLevel = false; //Es la variable que utilitzo per pausar el joc
 
+    //https://answers.unity.com/questions/850220/how-can-i-get-a-ui-canvas-to-hideappear-on-esc-but.html
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Pause();
+        }
+    }
+
     public void Pause()
     {
         Time.timeScale = 0; //Pausa
