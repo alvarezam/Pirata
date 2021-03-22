@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &376975430098724485
+--- !u!1 &6701123394589676521
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,37 +8,39 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2806540073567148821}
-  - component: {fileID: 2014015783683196122}
-  - component: {fileID: 1017697011445490223}
+  - component: {fileID: 9005089324782166182}
+  - component: {fileID: 285642891211983294}
+  - component: {fileID: 1118589158534012719}
+  - component: {fileID: 8192921025218199154}
+  - component: {fileID: 827350937821322668}
   m_Layer: 0
-  m_Name: barril
+  m_Name: PickUp_Moneda
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2806540073567148821
+--- !u!4 &9005089324782166182
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 376975430098724485}
+  m_GameObject: {fileID: 6701123394589676521}
   m_LocalRotation: {x: -0, y: -0, z: 0.2726254, w: 0.9621203}
-  m_LocalPosition: {x: -15.181201, y: -2.755134, z: 0}
-  m_LocalScale: {x: 0.2165783, y: 0.2165783, z: 0.2165783}
+  m_LocalPosition: {x: 7.66, y: -3.52, z: 0}
+  m_LocalScale: {x: 0.21657829, y: 0.21657829, z: 0.2165783}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 31.641}
---- !u!212 &2014015783683196122
+--- !u!212 &285642891211983294
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 376975430098724485}
+  m_GameObject: {fileID: 6701123394589676521}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -71,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 545de595775331445aaa40ccc4f13be3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1deccae9cf502d44286fd9045bd9798e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -82,13 +84,13 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1017697011445490223
+--- !u!114 &1118589158534012719
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 376975430098724485}
+  m_GameObject: {fileID: 6701123394589676521}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 84d52b372530d76498d08517c37b528f, type: 3}
@@ -96,3 +98,54 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
   col: {fileID: 0}
+  esRon: 0
+  esBarril: 0
+  esMoneda: 1
+  control: {fileID: 0}
+--- !u!50 &8192921025218199154
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6701123394589676521}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!61 &827350937821322668
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6701123394589676521}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.048698187, y: -0.53203595}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.29, y: 3.38}
+    newSize: {x: 3.74, y: 4.59}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.2279413, y: 1.4642067}
+  m_EdgeRadius: 0

@@ -9,7 +9,7 @@ using UnityEngine;
 /// ----------------------------------------------------------------------------------
 /// DESCRIPCIÓ
 ///         Script utilitzat per controlar el player 
-/// AUTOR:  Elisabet 
+/// AUTOR:  Elisabet Arnal
 /// DATA:   17/03/2021
 /// VERSIÓ: 1.0
 /// CONTROL DE VERSIONS
@@ -79,8 +79,12 @@ public class ScrPlayer : MonoBehaviour
     void Dispar()
     {
         foreach (Transform cano in canons)
-            if (cano.gameObject.activeSelf) Instantiate(missil, cano.position, cano.rotation);  
+            if (cano.gameObject.activeSelf)
+            {
+                Instantiate(missil, cano.position, cano.rotation);
+            } 
         crono = 0;
+
         BasicShot.Play();
         
     }

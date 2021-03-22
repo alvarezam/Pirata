@@ -130,7 +130,7 @@ public class ScrKraken : MonoBehaviour
 
     void Destruccio() // indica com es destrueix l'objecte
     {
-        Instantiate(explosio, transform.position, transform.rotation);
+        //Instantiate(explosio, transform.position, transform.rotation);
         isDestroyed = true;
         Destroy(gameObject);
     }
