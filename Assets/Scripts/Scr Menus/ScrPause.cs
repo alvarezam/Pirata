@@ -15,13 +15,17 @@ public class ScrPause : MonoBehaviour
     /// ----------------------------------------------------------------------------------
     /// </summary>
 
+    bool PausedLevel = false;
+
     public void Pause()
     {
-
+        Time.timeScale = 0;
+        PausedLevel = true;
     }
     public void Resume()
     {
-
+        Time.timeScale = 1;
+        PausedLevel = false;
     }
     public void Exit()
     {
