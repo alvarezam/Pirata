@@ -15,20 +15,22 @@ public class ScrPause : MonoBehaviour
     /// ----------------------------------------------------------------------------------
     /// </summary>
 
-    bool PausedLevel = false;
+    public bool PausedLevel = false; //Es la variable que utilitzo per pausar el joc
 
     public void Pause()
     {
-        Time.timeScale = 0;
+        Time.timeScale = 0; //Pausa
         PausedLevel = true;
     }
     public void Resume()
     {
-        Time.timeScale = 1;
+        Time.timeScale = 1; //Treure Pausa
         PausedLevel = false;
     }
     public void Exit()
     {
+        Time.timeScale = 1; //Torno a treure la pausa del joc cuant tornes al main menu perque cuant tornes a començar la patida es bugueja
+        PausedLevel = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1); //Per canviar d'escena (de joc a menu)
     }
 }
