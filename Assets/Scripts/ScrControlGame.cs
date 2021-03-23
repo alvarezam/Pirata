@@ -19,6 +19,10 @@ public class ScrControlGame : MonoBehaviour
     /// ----------------------------------------------------------------------------------
     /// </summary>
 
+    void Update()
+    {
+        
+    }
     static public bool EsVisibleDesde(Renderer renderer, Camera camera) //per comprobar si un objecte es troba dins del camp de càmera o no
     {
         Plane[] plans = GeometryUtility.CalculateFrustumPlanes(camera);
